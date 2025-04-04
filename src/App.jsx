@@ -4,21 +4,39 @@ function App(){
 
   const [nome, setNome] = useState('Ronaldo')
 
-  return (
-    <div>
-      <h3>Pizzaria 2D</h3>
+  const Formulario = () => {
 
-      <input
+    return (
+      <>
+        <h3>Formulário</h3>
+
+        <input
         className="nome"
         onChange={(e)=>{setNome(e.target.value)}}
         type="text" />
 
         <button
           className="botao"
-          onClick={()=>{alert(nome)}}
+          onClick={()=>{
+            alert('O nome digita foi ' + nome)
+          }
+        }
         >
           Clique Aqui
         </button>
+
+      </>
+    )
+  }
+
+  return (
+    <div>
+      <h3>Pizzaria 2D</h3>
+
+      <Formulario />
+      <Formulario />
+      <Formulario />
+      <Formulario />
 
     </div>
   )
